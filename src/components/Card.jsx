@@ -6,11 +6,17 @@ function Card({ title, date, time, location, description, skill, price, link }) 
     window.open(link, '_blank');
   };
 
+  // Check if skill level needs special styling
+  let skillClass = skill.toLowerCase();
+  if (skill === 'All Levels') {
+    skillClass = 'all-levels';
+  }
+
   return (
     <div className="card">
       <div className="card-header">
         <h3 className="card-title">{title}</h3>
-        <span className={`skill-badge ${skill.toLowerCase().replace(' ', '-')}`}>{skill}</span>
+        <span className={`skill-badge ${skillClass}`}>{skill}</span>
       </div>
       
       <div className="card-content">
@@ -37,7 +43,11 @@ function Card({ title, date, time, location, description, skill, price, link }) 
       </div>
       
       <div className="card-footer">
-        <button className="join-button" onClick={handleJoinClick}>
+        <button 
+          className="join-button" 
+          onClick={handleJoinClick}
+          style={{ cursor: 'pointer' }}
+        >
           Join Event
         </button>
       </div>

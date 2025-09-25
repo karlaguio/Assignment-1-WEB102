@@ -5,23 +5,26 @@ import Card from './components/Card';
 import { eventsData } from './data/eventsData';
 
 function App() {
+  // Main app component that renders the community board
   return (
     <div className="App">
       <Header />
       <div className="cards-container">
-        {eventsData.map((event) => (
-          <Card 
-            key={event.id}
-            title={event.title}
-            date={event.date}
-            time={event.time}
-            location={event.location}
-            description={event.description}
-            skill={event.skill}
-            price={event.price}
-            link={event.link}
-          />
-        ))}
+        {eventsData.map((event) => {
+          return (
+            <Card 
+              key={event.id}
+              title={event.title}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              description={event.description}
+              skill={event.skill}
+              price={event.price}
+              link={event.link}
+            />
+          );
+        })}
       </div>
     </div>
   );

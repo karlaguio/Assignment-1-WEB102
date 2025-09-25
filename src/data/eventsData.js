@@ -1,4 +1,5 @@
-export const eventsData = [
+// Events data for the community board
+const eventsData = [
   {
     id: 1,
     title: "React Hooks Workshop",
@@ -132,3 +133,5 @@ export const eventsData = [
     link: "https://www.uxbooth.com/articles/complete-beginners-guide-to-design-research/"
   }
 ];
+
+export { eventsData };
