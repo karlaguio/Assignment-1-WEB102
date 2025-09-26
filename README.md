@@ -1,10 +1,10 @@
 # Web Development Project 1 - *Community Board*
 
-Submitted by: **Your Name Here**
+Submitted by: **[Your Name]**
 
 This web app: **displays information about tech events and workshops in a community board format**
 
-Time spent: **X** hours spent in total
+Time spent: **3-4** hours spent in total
 
 ## Required Features
 
